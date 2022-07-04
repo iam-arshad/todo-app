@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDO app</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fb72a718b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1><i class="fa-solid fa-list-check"></i>TO DO</h1>
+            <form class="createMode">
+                <input type="text" id="newToDOInput" placeholder="add a new to do" />
+                <button type="submit" class="EmptyInputBox" id="addNewToDOButton">Add</button>
+                <button type="submit" id="updateAToDOButton">Update</button>
+            </form>
+        </div>
+        <div id="mainContent">
+
+            <div id="filters">
+                <ul>
+                    <li class="active" onclick="filterSelected('All')">All</li>
+                    <li onclick="filterSelected('Pending')">Pending</li>
+                    <li onclick="filterSelected('Completed')">Completed</li>
+                </ul>
+            </div>
+
+            <div id="ToDoList">
+                <ul>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div id="footer">
+
+            <div id="diffToDos">
+                <div id="PendingToDos" style="width: 50%;">
+                    <h5>Pending todo's</h5>
+                    <p><em id="noOfPendingToDos" class="Pending">0</em> todo's left</p>
+                </div>
+                <div id="CompletedToDos" style="width: 50%;">
+                    <h5>Completed todo's</h5>
+                    <p><em id="noOfCompletedToDos" class="Completed">0</em> todo's left</p>
+                </div>
+            </div>
+
+            <div id="overAllToDos">
+                <h5>Overall todo's</h5>
+                <p><em id="noOfOverallToDos">0</em> todo's left</p>
+                <button id='deleteAllTodosButton' type="submit">Delete All</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

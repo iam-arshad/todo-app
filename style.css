@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    border: 0;
+
+    background-color: #12395b;
+}
+
+
+div#wrapper {
+    border: 3px solid gray;
+    margin: 10vh 35vw;
+
+    width: 30vw;
+}
+
+/* #header {
+    border: 2px solid rgb(10, 183, 16);
+} */
+
+#header h1 {
+    text-align: center;
+    color: rgb(10, 183, 16);
+    margin-bottom: auto;
+}
+
+#header h1 i {
+    margin: 1rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+#newToDOInput {
+    width: 70%;
+    height: 1.8rem;
+    font-size: 1.3rem;
+    border-radius: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+/* hide update btn in createMOde */
+#header .createMode #updateAToDOButton {
+    display: none;
+}
+
+/* edit mode on */
+#header .editMode #newToDOInput {
+    border: 3px solid red;
+}
+
+/* hide add btn in editMode */
+#header .editMode #addNewToDOButton {
+    display: none;
+}
+
+/* display update button in editMode */
+#header .editMode #updateAToDOButton {
+    display: block;
+    color: red;
+}
+
+/* #addNewToDOButton */
+form button {
+    width: 20%;
+    font-size: 1.6rem;
+    background-color: rgb(10, 183, 16);
+    cursor: pointer;
+}
+
+
+.EmptyInputBox {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#filters {
+    margin: 0 0.3rem;
+    /* border: 2px solid red; */
+}
+
+#filters ul {
+    padding: 0;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 0.2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.2rem 0.5rem;
+}
+
+
+#filters ul li {
+    list-style: none;
+    padding: 0.45rem 2rem;
+    cursor: pointer;
+    /* overflow: hidden; */
+}
+
+#filters ul li.active {
+    background-color: #12395b;
+    color: white;
+}
+
+
+#ToDoList {
+    margin-bottom: 0;
+    /* max-height: 300px; */
+    /* overflow-y: scroll; */
+}
+
+#ToDoList ul {
+    padding: 0;
+    margin: 0.7rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+#ToDoList ul li {
+    list-style: none;
+    /* height: 1.7rem; */
+    border-bottom: 1px solid gray;
+    font-size: 1.5rem;
+    margin: 0.3rem;
+    padding: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+#ToDoList ul li p {
+    display: inline;
+    margin: 0.4rem;
+}
+
+#ToDoList ul li.Completed {
+    /* background-color: rgb(28, 113, 28); */
+    /* border-bottom: 2px solid gray; */
+    border-radius: 0.2rem;
+    margin: 0.5rem;
+
+}
+
+#ToDoList ul li.Completed p {
+    text-decoration: line-through;
+}
+
+/* hide edit,done buttons when todo is completed*/
+#ToDoList>ul>li.Completed>i>div>i.fa-solid.fa-pen,
+#ToDoList>ul>li.Completed>i>div>i.fa-solid.fa-check {
+    display: none;
+}
+
+
+.buttonsContainer {
+    display: inline;
+    margin: auto 0 auto 0;
+}
+
+/* temp  */
+
+.fa-ellipsis-vertical {
+    display: inline;
+    color: #12395b;
+    margin: auto 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.toDoActions {
+    position: absolute;
+    border-radius: 0.3rem;
+    border: 2px solid #12395b;
+    top: 1rem;
+    /* right: 3rem; */
+    display: none;
+    z-index: 2;
+}
+
+.toDoActions i {
+    background-color: white;
+    display: inline;
+    border: none;
+    margin: 0;
+    padding: 0.7rem 1rem;
+}
+
+.fa-check {
+    color: green;
+}
+
+/* .fa-check::before {
+    content: 'Completed';
+} */
+
+.fa-trash {
+    color: red;
+}
+
+.fa-pen {
+    color: black;
+}
+
+.doneBtn {
+    background-color: green;
+}
+
+.deleteBtn {
+    background-color: red;
+}
+
+
+#footer {
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 50%;
+    flex-direction: column;
+    text-align: center;
+}
+
+#diffToDos {
+    display: flex;
+    /* border: 2px solid orange; */
+}
+
+#footer h5 {
+    font-size: 1.5rem;
+    margin: 0.7rem;
+    color: white;
+}
+
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+    display: inline;
+}
+
+#deleteAllTodosButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    margin: auto auto 0.4rem 1rem;
+    cursor: pointer;
+}
