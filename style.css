@@ -1,10 +1,68 @@
 body {
     margin: 0;
     border: 0;
-
+    box-sizing: border-box;
     background-color: #12395b;
 }
 
+/* hide update btn in createMOde */
+#header .createMode #updateAToDOButton {
+    display: none;
+}
+
+/* edit mode on */
+#header .editMode #newToDOInput {
+    border: 3px solid red;
+}
+
+/* hide add btn in editMode */
+#header .editMode #addNewToDOButton {
+    display: none;
+    /* font-size: 8px; */
+    width: auto;
+}
+
+/* display update button in editMode */
+#header .editMode #updateAToDOButton {
+    display: block;
+    color: red;
+    font-size: small;
+    width: auto;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+#diffToDos {
+    display: flex;
+    /* border: 2px solid orange; */
+}
+
+.fa-check {
+    color: green;
+}
+
+/* .fa-check::before {
+    content: 'Completed';
+} */
+
+.fa-trash {
+    color: red;
+}
+
+.fa-pen {
+    color: black;
+}
+
+.doneBtn {
+    background-color: green;
+}
+
+.deleteBtn {
+    background-color: red;
+}
 
 div#wrapper {
     border: 3px solid gray;
@@ -27,10 +85,7 @@ div#wrapper {
     margin: 1rem;
 }
 
-form {
-    display: flex;
-    justify-content: center;
-}
+
 
 #newToDOInput {
     width: 70%;
@@ -40,30 +95,11 @@ form {
     margin-right: 0.5rem;
 }
 
-/* hide update btn in createMOde */
-#header .createMode #updateAToDOButton {
-    display: none;
-}
-
-/* edit mode on */
-#header .editMode #newToDOInput {
-    border: 3px solid red;
-}
-
-/* hide add btn in editMode */
-#header .editMode #addNewToDOButton {
-    display: none;
-}
-
-/* display update button in editMode */
-#header .editMode #updateAToDOButton {
-    display: block;
-    color: red;
-}
 
 /* #addNewToDOButton */
 form button {
-    width: 20%;
+    width: auto;
+    color: rgb(218, 218, 231);
     font-size: 1.6rem;
     background-color: rgb(10, 183, 16);
     cursor: pointer;
@@ -90,6 +126,7 @@ form button {
     justify-content: space-between;
     align-items: center;
     margin: 1.2rem 0.5rem;
+    overflow: hidden;
 }
 
 
@@ -175,6 +212,7 @@ form button {
 .toDoActions {
     position: absolute;
     border-radius: 0.3rem;
+    width: 0.7rem;
     border: 2px solid #12395b;
     top: 1rem;
     /* right: 3rem; */
@@ -187,32 +225,9 @@ form button {
     display: inline;
     border: none;
     margin: 0;
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 0.3rem;
 }
 
-.fa-check {
-    color: green;
-}
-
-/* .fa-check::before {
-    content: 'Completed';
-} */
-
-.fa-trash {
-    color: red;
-}
-
-.fa-pen {
-    color: black;
-}
-
-.doneBtn {
-    background-color: green;
-}
-
-.deleteBtn {
-    background-color: red;
-}
 
 
 #footer {
@@ -224,10 +239,7 @@ form button {
     text-align: center;
 }
 
-#diffToDos {
-    display: flex;
-    /* border: 2px solid orange; */
-}
+
 
 #footer h5 {
     font-size: 1.5rem;
@@ -248,4 +260,41 @@ form button {
     padding: 0.5rem;
     margin: auto auto 0.4rem 1rem;
     cursor: pointer;
+}
+
+
+
+/* for the screens of width<700px */
+@media screen and (max-width:700px) {
+    div#wrapper {
+        border: 3px solid gray;
+        margin: 10vh 0vw 10vh 0vw;
+        width: 75vw;
+        padding-right: 0.8rem;
+    }
+
+    #filters ul li {
+        list-style: none;
+        /* border: 1px solid orangered; */
+        width: auto;
+        text-align: center;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:900px) {
+    div#wrapper {
+        border: 3px solid gray;
+        margin: 10vh 20vw 10vh 20vw;
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1200px) {
+    div#wrapper {
+        border: 3px solid gray;
+        margin: 10vh 30vw 10vh 30vw;
+        width: 50vw;
+    }
 }
